@@ -15,10 +15,11 @@ error_aceptado: el valor por defecto es 1e-5
 
 def biseccion(funcion_f, lim_inf, lim_sup, error_aceptado=1e-5):
     
-    raiz_aprox =  (lim_sup - lim_inf) / 2
-    error =  (lim_sup - lim_inf)
+    
+    raiz_aprox = (lim_inf + lim_sup) / 2
+    error_calculado =  raiz_aprox - lim_inf
 
-    while error < error_aceptado:
+    while error_aceptado < error_calculado:
 
         condicion_bolzano = funcion_f(lim_inf) * funcion_f(raiz_aprox) < 0
 
@@ -27,8 +28,10 @@ def biseccion(funcion_f, lim_inf, lim_sup, error_aceptado=1e-5):
         else:
             lim_inf = raiz_aprox
 
-        error = abs(lim_sup - lim_inf)
-        raiz_aprox = (lim_sup - lim_inf) / 2
+        raiz_aprox_previa = raiz_aprox
+        raiz_aprox = (lim_inf + lim_sup) / 2
+        
+        error_calculado = (raiz_aprox - raiz_aprox_previa)
     
     return raiz_aprox
 
