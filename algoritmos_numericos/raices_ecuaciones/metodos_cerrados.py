@@ -13,7 +13,7 @@ error_aceptado: el valor por defecto es 1e-5
 '''
 
 
-def biseccion(funcion_f, lim_inf, lim_sup, error_aceptado=1e-5)  -> float:
+def biseccion(funcion_f, lim_inf, lim_sup, error_aceptado=1e-5):
     
     raiz_aprox =  (lim_sup - lim_inf) / 2
     error =  (lim_sup - lim_inf)
