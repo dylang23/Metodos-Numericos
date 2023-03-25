@@ -1,0 +1,4 @@
+build/
+dist/
+parsers.egg-info/
+algoritmos_numericos.egg-infod/
