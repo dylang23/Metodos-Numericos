@@ -6,7 +6,8 @@ from sympy.parsing.sympy_parser import implicit_multiplication, implicit_applica
 def str_to_exprsympy(expression: str) -> Expr:
     
     x = Symbol('x')
-
+    
+    expression = expression.replace('^', '**')
     local_dict = {'x': x, 'sen': sin}
     
     transformations = standard_transformations + \
