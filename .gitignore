@@ -2,3 +2,7 @@ build/
 dist/
 parsers.egg-info/
 algoritmos_numericos.egg-info/
+*.pyc
+*.cpy
+*.gitignore
+*.json

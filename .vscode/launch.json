@@ -5,10 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Module",
+            "name": "Test para metodos cerrados",
             "type": "python",
             "request": "launch",
-            "module": "enter-your-module-name",
+            "module": "tests.test_metodos_cerrados",
+            "justMyCode": true
+        },
+        {
+            "name": "Test para metodos abiertos",
+            "type": "python",
+            "request": "launch",
+            "module": "tests.test_metodos_abiertos",
             "justMyCode": true
         }
     ]

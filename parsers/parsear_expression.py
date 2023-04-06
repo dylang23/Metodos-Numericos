@@ -8,6 +8,7 @@ def str_to_exprsympy(expression: str) -> Expr:
     x = Symbol('x')
     
     expression = expression.replace('^', '**')
+    expression = expression.replace('cosx', 'cos(x)')
     local_dict = {'x': x, 'sen': sin}
     
     transformations = standard_transformations + \
