@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Tp2 - Ejercicio 2-b",
+            "type": "python",
+            "request": "launch",
+            "module": "Tps.Tp2.Ejercicio2-b",
+            "justMyCode": true
+        },
+        {
             "name": "Test para metodos cerrados",
             "type": "python",
             "request": "launch",
@@ -16,6 +23,13 @@
             "type": "python",
             "request": "launch",
             "module": "tests.test_metodos_abiertos",
+            "justMyCode": true
+        }
+        {
+            "name": "Test para metodos directos de Sistemas de ecuaciones lineales",
+            "type": "python",
+            "request": "launch",
+            "module": "tests.test_se_metodos_directos",
             "justMyCode": true
         }
     ]
