@@ -20,10 +20,10 @@ def main():
     
     solucion_gauss_simple = gauss_simple(matriz)
     solucion_gauss_jordan = gauss_jordan(matriz)
-  
+
     print("Solución con Gauss simple: ", solucion_gauss_simple)
     print("Solución con Gauss-Jordan: ", solucion_gauss_jordan)
     print("Determinante: ", det_matriz)
-
+    
 if __name__ == "__main__":
     main()

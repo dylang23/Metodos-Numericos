@@ -6,6 +6,8 @@ Ingresando los datos del problema con un redondeo de tres cifras significativas.
 '''
 
 
+
+
 def main():
     print("Ejercicio 2-a con rendondeo")
     matriz = [[1, 0.5, 0.333, 0.25, 2.083], [0.5, 0.333, 0.25, 0.2, 1.283],
