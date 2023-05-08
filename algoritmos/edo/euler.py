@@ -1,6 +1,6 @@
 from parsers.parsear_expression import str_to_function
 
-def euler(funcion, intervalo=[0, 0], condicion_inicial=(0, 0), tam_paso=0.5):
+def euler(funcion, intervalo, condicion_inicial=(0, 0), tam_paso=0.5):
 
     valor_xinicial = intervalo[0]
     valor_xfinal = intervalo[1]
@@ -36,16 +36,20 @@ def euler_sedo(ecuaciones, intervalo, condiciones_iniciales, tam_paso, pasos):
     
     return euler_pasos
 
+
+
 #ec_dif1 = str_to_function("-0.5y1", variables=['x', 'y1', 'y2'])
 #ec_dif2 = str_to_function("4 -0.3y2 -0.1y1", variables=['x', 'y1', 'y2'])
 #condiciones_iniciales = [4, 6]
 #tam_paso = 0.5
 #pasos = 4
 
-ec_dif1 = str_to_function("3x - 2y", variables=['t', 'x', 'y'])
-ec_dif2 = str_to_function("5x - 4y", variables=['t', 'x', 'y'])
-condiciones_iniciales = [3, 6]
-tam_paso = 0.2
-pasos = 10
+'''
+ec_dif1 = str_to_function("2*exp(t) - 2*y - z", variables=['t', 'y', 'z'])
+ec_dif2 = str_to_function("y", variables=['t', 'y', 'z'])
+condiciones_iniciales = [0, 1]
+tam_paso = 0.1
+pasos = 20
 
 print(euler_sedo([ec_dif1, ec_dif2], [0, 2], condiciones_iniciales, tam_paso, pasos))
+'''
