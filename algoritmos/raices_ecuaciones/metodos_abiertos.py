@@ -35,7 +35,7 @@ def newton(funcion_f, derivada_f, valor_inicial, cant_iter=100, error_aceptado=1
 
         raiz_aprox = raiz_aprox_prev - \
             funcion_f(raiz_aprox_prev) / derivada_f(raiz_aprox_prev)
-        error_calculado = abs(raiz_aprox - raiz_aprox_prev)
+        error_calculado = abs( (raiz_aprox - raiz_aprox_prev) / raiz_aprox)
 
         iteraciones.append(IteracionNewton(raiz_aprox, raiz_aprox_prev, funcion_f(
             raiz_aprox_prev), derivada_f(raiz_aprox), error_calculado))
@@ -59,7 +59,7 @@ def secante(funcion_f, valor_inicial, valor_sig, cant_iter=100, error_aceptado=1
             funcion_f(valor_inicial)*(valor_inicial - valor_sig) / \
             (funcion_f(valor_inicial) - funcion_f(valor_sig))
 
-        error_calculado = abs(raiz_aprox - valor_sig)
+        error_calculado = abs( (raiz_aprox - valor_sig) / raiz_aprox)
 
         iteraciones.append(IteracionSecante(
             valor_inicial, valor_sig, raiz_aprox, error_calculado, funcion_f(raiz_aprox)))

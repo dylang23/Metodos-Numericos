@@ -12,7 +12,7 @@ def biseccion(funcion_f, lim_inf, lim_sup, cant_iter=100, error_aceptado=1e-5) -
 
         raiz_aprox_prev = raiz_aprox
         raiz_aprox = (lim_inf + lim_sup) / 2
-        error_calculado = abs(raiz_aprox - raiz_aprox_prev)
+        error_calculado = abs( (raiz_aprox - raiz_aprox_prev) / raiz_aprox ) 
         
         iteraciones.append(IteracionBiseccion(raiz_aprox, error_calculado,
                           funcion_f(raiz_aprox), lim_inf, lim_sup))
@@ -46,7 +46,7 @@ def regula_falsi(funcion_f, lim_inf, lim_sup, cant_iter=100, error_aceptado=1e-5
         
         raiz_aprox_previa = raiz_aprox
         raiz_aprox = nueva_aprox()
-        error_calculado = abs(raiz_aprox - raiz_aprox_previa)
+        error_calculado = abs( (raiz_aprox - raiz_aprox_previa) / raiz_aprox)
 
         iteraciones.append(IteracionRegulaFalsi(raiz_aprox, error_calculado,
                           funcion_f(raiz_aprox), lim_inf, lim_sup))

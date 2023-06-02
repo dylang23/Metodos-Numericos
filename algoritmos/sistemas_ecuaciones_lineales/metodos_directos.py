@@ -8,6 +8,7 @@ def gauss_simple(matriz):
 
     matriz = matriz_to_numpyarray(matriz)
     matriz_triangular_superior = eliminacion_hacia_adelante(matriz)
+   # print(matriz_triangular_superior)
     solucion = sustitucion_atras(matriz_triangular_superior)
 
     return solucion
@@ -23,6 +24,7 @@ def eliminacion_hacia_adelante(matriz):
         pivote_gauss_simple(matriz, i)
         for j in range(i + 1, filas):
             factor = matriz[j][i] / matriz[i][i]
+          #  matriz[j][i] = 0
             for k in range(i + 1, columnas):
                 matriz[j][k] = matriz[j][k] - factor * matriz[i][k]
 
