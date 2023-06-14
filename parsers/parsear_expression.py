@@ -1,6 +1,7 @@
 from sympy import Symbol, lambdify, Expr, sin
 from sympy.parsing.sympy_parser import parse_expr, standard_transformations
 from sympy.parsing.sympy_parser import implicit_multiplication, implicit_application, function_exponentiation
+from sympy import simplify
 
 
 def str_to_exprsympy(expression: str) -> Expr:
@@ -34,3 +35,8 @@ def str_to_function(expression: str, variables=['x']) -> callable:
     function = exprsympy_to_function(expr_sympy, variables)
 
     return function
+
+
+def simply_exprstr(expression: str) -> str: 
+    expr_simplificada = simplify(str_to_exprsympy(expression))
+    return str(expr_simplificada)

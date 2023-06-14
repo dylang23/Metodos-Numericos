@@ -39,7 +39,7 @@ def gauss_seidel(matriz, solucion_inicial, iter_max=50, error_aceptado=1e-5):
 def jacobi(matriz, solucion_inicial, iter_max=50, error_aceptado=1e-5):
 
     matriz = array(matriz, dtype=float64)
-    normalizar(matriz)
+    #normalizar(matriz)
     filas = matriz.shape[0]
     solucion_actual = list(solucion_inicial)
 
@@ -79,5 +79,5 @@ def normalizar(matriz):
 
     for i in range(filas):
         for j in range(filas + 1):
-            print(i, j)
+          ##  print(i, j)
             matriz[i][j] /= mayores_coeficientes[i]
